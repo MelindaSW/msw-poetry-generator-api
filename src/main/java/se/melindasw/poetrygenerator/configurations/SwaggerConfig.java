@@ -28,7 +28,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiEndPointsInfo() {
         return new ApiInfoBuilder().title("poetry-generator by MelindaSW")
-                .description("Poetry generator REST API. Generates different kinds of poems from texts")
+                .description("Poetry generator REST API. Generates different kinds of poems from a chosen text source")
                 .contact(new Contact("Melinda Sandström-Wagner", "https://github.com/MelindaSW", ""))
                 .version("1.0.0")
                 .build();

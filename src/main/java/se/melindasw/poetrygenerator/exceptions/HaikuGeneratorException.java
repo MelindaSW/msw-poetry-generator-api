@@ -1,5 +1,10 @@
 package se.melindasw.poetrygenerator.exceptions;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper = true)
+@Data
 public class HaikuGeneratorException extends Exception {
 
     private String message;
@@ -18,14 +23,6 @@ public class HaikuGeneratorException extends Exception {
 
     public HaikuGeneratorException(String message, String[] errorHaiku) {
         this.message = message;
-    }
-
-    public String getMessage() {
-        return this.message;
-    }
-
-    public String[] getErrorHaiku() {
-        return this.errorHaiku;
     }
 
 }

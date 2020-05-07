@@ -1,4 +1,4 @@
-package se.melindasw.poetrygenerator.haikufeature;
+package se.melindasw.poetrygenerator.haiku;
 
 import org.springframework.stereotype.Service;
 import se.melindasw.poetrygenerator.exceptions.HaikuGeneratorException;
@@ -9,11 +9,29 @@ import java.util.*;
 @Service
 public class HaikuGenerator implements HaikuGeneratorService {
 
-    private final int[][] combinationsOfFive = { {1, 1, 1, 1, 1}, {1, 1, 1, 2}, {1, 1, 3}, {1, 2, 2}, {1, 4}, {2, 3}, {5} };
-    private final int[][] combinationsOfSeven = { {1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 2}, {1, 1, 1, 2, 2}, {1, 1, 1, 1, 3}, {1, 1, 2, 3},
-            {1, 1, 1, 4}, {1, 1, 5}, {1, 3, 3}, {1, 2, 4}, {3, 2, 2}, {3, 4}, {2, 5}, {1, 6}, {7} };
-    private Map<Integer, List<String>> allWordsSortedBySyllableCountKeys = new HashMap<>();
-    private SyllableCounter syllableCounter = SyllableCounter.getInstance();
+    private final int[][] combinationsOfFive = { {1, 1, 1, 1, 1},
+                                                    {1, 1, 1, 2},
+                                                    {1, 1, 3},
+                                                    {1, 2, 2},
+                                                    {1, 4},
+                                                    {2, 3},
+                                                    {5} };
+    private final int[][] combinationsOfSeven = { {1, 1, 1, 1, 1, 1, 1},
+                                                    {1, 1, 1, 1, 1, 2},
+                                                    {1, 1, 1, 2, 2},
+                                                    {1, 1, 1, 1, 3},
+                                                    {1, 1, 2, 3},
+                                                    {1, 1, 1, 4},
+                                                    {1, 1, 5},
+                                                    {1, 3, 3},
+                                                    {1, 2, 4},
+                                                    {3, 2, 2},
+                                                    {3, 4},
+                                                    {2, 5},
+                                                    {1, 6},
+                                                    {7} };
+    private final Map<Integer, List<String>> allWordsSortedBySyllableCountKeys = new HashMap<>();
+    private final SyllableCounter syllableCounter = SyllableCounter.getInstance();
 
     @Override
     public Haiku generateHaiku(String text) throws HaikuGeneratorException {

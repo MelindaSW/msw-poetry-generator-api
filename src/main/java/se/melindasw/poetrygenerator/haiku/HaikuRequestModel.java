@@ -1,4 +1,4 @@
-package se.melindasw.poetrygenerator.haikufeature;
+package se.melindasw.poetrygenerator.haiku;
 
 import lombok.Data;
 
