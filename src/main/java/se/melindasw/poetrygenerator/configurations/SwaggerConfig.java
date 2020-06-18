@@ -16,22 +16,24 @@ import java.time.LocalTime;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .directModelSubstitute(LocalTime.class, String.class)
-                .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build().apiInfo(apiEndPointsInfo());
-    }
+  @Bean
+  public Docket api() {
+    return new Docket(DocumentationType.SWAGGER_2)
+        .directModelSubstitute(LocalTime.class, String.class)
+        .select()
+        .apis(RequestHandlerSelectors.any())
+        .paths(PathSelectors.any())
+        .build()
+        .apiInfo(apiEndPointsInfo());
+  }
 
-    private ApiInfo apiEndPointsInfo() {
-        return new ApiInfoBuilder().title("poetry-generator by MelindaSW")
-                .description("Poetry generator REST API. Generates different kinds of poems from a chosen text source")
-                .contact(new Contact("Melinda Sandström-Wagner", "https://github.com/MelindaSW", ""))
-                .version("1.0.0")
-                .build();
-    }
-
+  private ApiInfo apiEndPointsInfo() {
+    return new ApiInfoBuilder()
+        .title("poetry-generator by MelindaSW")
+        .description(
+            "Poetry generator REST API. Generates different kinds of poems from a chosen text source")
+        .contact(new Contact("Melinda Sandström-Wagner", "https://github.com/MelindaSW", ""))
+        .version("1.0.0")
+        .build();
+  }
 }

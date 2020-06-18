@@ -6,8 +6,8 @@ import se.melindasw.poetrygenerator.services.AcrosticGeneratorService;
 
 @Service
 public class AcrosticGenerator implements AcrosticGeneratorService {
-    @Override
-    public Acrostic generateAcrosticPoem(String text, String word) throws AcrosticGeneratorException {
-        return null;
-    }
+  @Override
+  public Acrostic generateAcrosticPoem(String text, String word) throws AcrosticGeneratorException {
+    return null;
+  }
 }

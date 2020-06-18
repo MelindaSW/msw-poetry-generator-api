@@ -4,6 +4,5 @@ import lombok.Data;
 
 @Data
 public class HaikuRequestModel {
-    public String text;
+  public String text;
 }
-

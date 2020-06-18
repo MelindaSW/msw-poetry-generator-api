@@ -6,18 +6,13 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class AcrosticGeneratorException extends Exception {
-    private String message;
+  private String message;
 
-    private String[] acrosticError = new String[]{
-            "Error",
-            "Really",
-            "Returned",
-            "Ordinary",
-            "Results"
-    };
+  private String[] acrosticError =
+      new String[] {"Error", "Really", "Returned", "Obnoxious", "Results"};
 
-    public AcrosticGeneratorException(String message, String[] error) {
-        this.message = message;
-        this.acrosticError = error;
-    }
+  public AcrosticGeneratorException(String message, String[] error) {
+    this.message = message;
+    this.acrosticError = error;
+  }
 }

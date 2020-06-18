@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class AcrosticRequestModel {
-    public String text;
-    public String word;
+  public String text;
+  public String word;
 }

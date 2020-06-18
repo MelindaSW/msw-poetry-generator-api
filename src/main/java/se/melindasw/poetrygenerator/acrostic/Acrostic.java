@@ -4,8 +4,9 @@ import lombok.Data;
 
 @Data
 public class Acrostic {
-    public String[] acrostic;
-    public Acrostic(String[] acrostic) {
-        this.acrostic = acrostic;
-    }
+  public String[] acrostic;
+
+  public Acrostic(String[] acrostic) {
+    this.acrostic = acrostic;
+  }
 }
