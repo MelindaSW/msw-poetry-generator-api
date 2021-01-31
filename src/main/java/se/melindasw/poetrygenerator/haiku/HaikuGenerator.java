@@ -86,6 +86,7 @@ public class HaikuGenerator implements HaikuGeneratorService {
     if (trueIfAllValuesInArrayExistAsMapKeys(randomComboOfFiveOrSeven)) {
       row = assembleRow(randomComboOfFiveOrSeven);
     } else {
+      // TODO: method not correctly used here. Assign to variable and use it in loop
       shuffleMultidimensionalArray(combinationsOfFiveOrSeven);
       for (int[] combo : combinationsOfFiveOrSeven) {
         if (trueIfAllValuesInArrayExistAsMapKeys(combo)) {

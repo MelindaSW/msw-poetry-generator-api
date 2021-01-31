@@ -26,8 +26,8 @@ public class PoetryController {
     this.acrosticService = acrosticService;
   }
 
-  @PostMapping("/generatehaiku")
-  public ResponseEntity generateHaikuFromText(@RequestBody final HaikuRequestModel model) {
+  @PostMapping("/haiku")
+  public ResponseEntity generateHaiku(@RequestBody final HaikuRequestModel model) {
     Haiku generatedHaiku = null;
     try {
       generatedHaiku = haikuService.generateHaiku(model.getText());
@@ -39,8 +39,8 @@ public class PoetryController {
     return new ResponseEntity(generatedHaiku, HttpStatus.ACCEPTED);
   }
 
-  @PostMapping("/generateacrostic")
-  public ResponseEntity generateAcrostic(@RequestBody final AcrosticRequestModel model) {
+  @PostMapping("/acrostic")
+  public ResponseEntity generateAcrosticPoem(@RequestBody final AcrosticRequestModel model) {
     //        Acrostic generatedAcrostic = null;
     //        try {
     //            generatedAcrostic = acrosticService.generateAcrosticPoem("Test text", "T");

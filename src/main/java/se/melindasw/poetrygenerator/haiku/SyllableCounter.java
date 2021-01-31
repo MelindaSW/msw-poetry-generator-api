@@ -66,8 +66,8 @@ public class SyllableCounter implements SyllableCounterService {
     int value = 0;
     Matcher matcher = null;
 
-    for (int i = 0; i < array.length; i++) {
-      matcher = Pattern.compile(array[i]).matcher(word);
+    for (String s : array) {
+      matcher = Pattern.compile(s).matcher(word);
       if (matcher.find()) {
         value -= 1;
       }
